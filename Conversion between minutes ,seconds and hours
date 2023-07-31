@@ -1,0 +1,24 @@
+public class MinutesSecondsHours {
+   public static String getduration(int sec){
+       if (sec<0){
+           System.out.println("Invalid");
+       }
+       int min=sec/60;
+       return getduration( min,sec);
+   }
+    public static String getduration(int min,int sec){
+       if (min<0 && sec<0 || sec>59){
+           System.out.println("Invalid");
+       }
+        int hr=min/60;
+        int rem=min%60;
+        int remsec=sec%60;
+        return (hr+" hr "+rem+" min "+remsec+" sec");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getduration(3945));
+        System.out.println(getduration(65,45));
+    }
+
+}
