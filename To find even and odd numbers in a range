@@ -1,0 +1,25 @@
+public class demo {
+    public static void main(String[] args) {
+        int i=4;
+        int count=0;
+        int countodd=0;
+        while(i<=20){
+            if (isEvenNumber(i)==true){
+                count++;
+                System.out.println(i);
+                }
+            }
+            else {
+                countodd++;
+            }
+            i++;
+        }System.out.println("Total even numbers found are - "+count);
+        System.out.println("Total odd numbers found are - "+countodd);
+    }
+    public static boolean isEvenNumber(int num){
+        if(num%2==0){
+            return true;
+        }
+        return false;
+    }
+}
