@@ -1,0 +1,30 @@
+public class demo {
+    public static void main(String[] args) {
+        /*System.out.println("0 is "+(isPrime(0)?"":"Not") +" a prime number");
+        System.out.println("2 is "+(isPrime(2)?"":"Not") +" a prime number");
+        System.out.println("5 is "+(isPrime(5)?"":"Not") +" a prime number");*/
+
+        int count=0;
+        for(int i=0;i<=1000;i++){
+            if(isPrime(i)==true){
+                System.out.println(i+" is a prime number");
+                count++;
+                if (count==3)
+                    break;
+            }
+
+        }
+    }
+    public static boolean isPrime(int num) {
+            if (num <= 2) {
+                return num == 2;
+            }
+            for (int div = 2; div < num; div++) {
+                if (num % div == 0) {
+                    return false;
+                }
+            }
+        return true;
+        }
+    }
+
