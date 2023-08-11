@@ -1,0 +1,35 @@
+public class SimpleCalculator {
+    private double FirstNumber;
+    private double SecondNumber;
+
+    public double getFirstNumber() {
+        return FirstNumber;
+    }
+
+    public void setFirstNumber(double FirstNumber) {
+        this.FirstNumber = FirstNumber;
+    }
+
+    public double getSecondNumber() {
+        return SecondNumber;
+    }
+
+    public void setSecondNumber(double SecondNumber) {
+        this.SecondNumber = SecondNumber;
+    }
+    public double getAdditionResult(){
+        return FirstNumber+SecondNumber;
+    }
+    public double getSubtractionResult(){
+        return FirstNumber-SecondNumber;
+    }
+    public double getMultiplicationResult(){
+        return FirstNumber*SecondNumber;
+    }
+    public double getDivisionResult(){
+        if (SecondNumber==0){
+            return 0;
+        }
+        return FirstNumber/SecondNumber;
+    }
+}
