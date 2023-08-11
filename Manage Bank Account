@@ -1,0 +1,61 @@
+public class Account {
+    private int AccountNumber;
+    private double AccountBalance;
+    private String CustomerName;
+    private String CustomerEmail;
+    private long CustomerPhoneNumber;
+
+    public int getAccountNumber() {
+        return AccountNumber;
+    }
+
+    public void setAccountNumber(int AccountNumber) {
+        this.AccountNumber = AccountNumber;
+    }
+
+    public double getAccountBalance() {
+        return AccountBalance;
+    }
+
+    public void setAccountBalance(double AccountBalance) {
+        this.AccountBalance = AccountBalance;
+    }
+
+    public String getCustomerName() {
+        return CustomerName;
+    }
+
+    public void setCustomerName(String CustomerName) {
+        this.CustomerName = CustomerName;
+    }
+
+    public String getCustomerEmail() {
+        return CustomerEmail;
+    }
+
+    public void setCustomerEmail(String CustomerEmail) {
+        this.CustomerEmail = CustomerEmail;
+    }
+
+    public long getCustomerPhoneNumber() {
+        return CustomerPhoneNumber;
+    }
+
+    public void setCustomerPhoneNumber(long CustomerPhoneNumber) {
+        this.CustomerPhoneNumber = CustomerPhoneNumber;
+    }
+    public void depositfunds(double deposit){
+        AccountBalance +=deposit;
+        System.out.println(deposit+" was deposited & new balance is - "+AccountBalance);
+    }
+    public void withdraw(double withdraw){
+
+        if (AccountBalance-withdraw<0){
+            System.out.println("Balance is negative & Amount cannot be withdrawn");
+        }
+        else {
+            AccountBalance-=withdraw;
+            System.out.println(withdraw+" was withdrawn & new balance is - "+AccountBalance);
+        }
+    }
+}
